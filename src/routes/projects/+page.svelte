@@ -61,10 +61,13 @@
 			duration-100 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" >Home</a>
 		  </li>
 		  <li>
-			<a href="/roadmap" class="block py-2 pl-3 pr-4 transition 
-			duration-100 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Timeline</a>
+			<a href="/timeline" class="block py-2 pl-3 pr-4 transition 
+			duration-100 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Timeline</a>
 		  </li>
-
+		  <li>
+			<a href="/projects" class="block py-2 pl-3 pr-4 transition 
+			duration-100 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Projects</a>
+		  </li>
 		</ul>
 	  </div>
 	</div>
@@ -80,34 +83,16 @@
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-10 text-center flex flex-col items-center">
 		<div class="flex justify-center space-x-2">
-			
-
-			<ol class="relative border-l border-gray-200 dark:border-gray-700">                  
-				<li class="mb-10 ml-4">
-					<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-					<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">August 2023</time>
-					<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Started Deep Diving Into Web Development</h3>
-					<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Been studying for a while now I have explored dozens of frameworks, components, and interactive elements such as Svelte and Tailwind CSS which is what this page is built with.</p>
-					<a href="https://github.com/sveltejs/svelte" class="inline-flex items-center px-4 py-2 text-sm font-medium transition 
-					duration-200 text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Check Out Svelte Here!!<svg class="w-3 h-3 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-				<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-			  </svg></a>
-				</li>
-				<li class="mb-10 ml-4">
-					<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-					<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">September 2023</time>
-					<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Exploring More Frameworks & Bootstrap</h3>
-					<p class="text-base font-normal text-gray-500 dark:text-gray-400">I am currently trying out different types of technology and will make a project out of it. Stay tuned!!</p>
-				</li>
+			<ol class="relative ">                  
 				<li class="ml-4">
-					<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+					<div class="absolute w-3 h-3 "></div>
 					<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">November 2023</time>
+					<h3 id="textglow" class="text-lg font-semibold text-gray-900 dark:text-white">Personal Project</h3>
 					<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Personal Project</h3>
 					<p class="text-base font-normal text-gray-500 dark:text-gray-400">More info releasing soon.</p>
 				</li>
 			</ol>
 			
-
 		</div>
 		
 	</div>
@@ -117,10 +102,10 @@
 	<slot />
 
 <style lang="postcss">	
-	.h3 {
+	#textglow {
 		@apply absolute z-[-1] rounded-full blur-[50px] transition-all;
-		animation: pulse 5s cubic-bezier(0, 0, 0, 0.5) infinite,
-			glow 5s linear infinite;
+		animation: pulse 2s cubic-bezier(0, 0, 0, 0.5) infinite,
+			glow 1s linear infinite;
 	}
 	/* #btn2 {
 		@apply absolute z-[-1] rounded-full blur-[50px] transition-all;
@@ -143,7 +128,7 @@
 	}
 	@keyframes pulse {
 		50% {
-			transform: scale(1.5);
+			transform: scale(4);
 		}
 	}
 </style>
