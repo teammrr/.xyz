@@ -16,6 +16,7 @@
 			>
 				Portfolio
 			</a>
+			
 			<!-- <a
 			id="btn1"
 			class="btn variant-filled"
@@ -52,7 +53,7 @@
 	}
 	@keyframes pulse {
 		50% {
-			transform: scale(1.5);
+			transform: scale(6);
 		}
 	}
 </style>

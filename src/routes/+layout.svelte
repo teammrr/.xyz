@@ -2,6 +2,10 @@
 	// The ordering of these imports is critical to your app working properly
 	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 	import { LightSwitch } from '@skeletonlabs/skeleton';
+	import { DarkMode } from 'flowbite-svelte';
+	let btnClass = 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg text-xl p-2';
+
+
 
 	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
@@ -15,17 +19,19 @@
 <AppShell>
 	<svelte:fragment slot="header">
 		
+		
 		<!-- App Bar -->
 
 		<nav class=" bg-white border-gray-200 absolute shadow-[0_8px_30px_rgb(0,0,0,0.12)] inset-x-2 top-2 rounded-lg dark:bg-transparent ">
 			<div class="max-w-screen flex flex-wrap items-center justify-between mx-auto p-4">
-			<a href="https://flowbite.com/" class="flex items-center">
+			<a href="https://teammer.xyz/" class="flex items-center">
 				<img src="https://sv1.picz.in.th/images/2023/08/28/dWi9Wja.png" class="h-11 " alt="Team Logo" />
 				<span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"> </span>
 			</a>
 			<div class="flex md:order-2">
 				<div class="relative hidden md:block">
-					<LightSwitch />
+					<!-- <LightSwitch /> -->
+					<DarkMode {btnClass} />
 				  </div>
 				  <!-- Menu button -->
 				  <button
