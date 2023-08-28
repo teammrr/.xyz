@@ -1,6 +1,4 @@
-<div class="absolute right-4 top-4" >
-	<LightSwitch />
-</div>
+
 
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-10 text-center flex flex-col items-center">
@@ -32,17 +30,12 @@
 	</div>
 </div>
 
-<style lang="postcss">
+<style lang="postcss">	
 	.h3 {
 		@apply absolute z-[-1] rounded-full blur-[50px] transition-all;
 		animation: pulse 5s cubic-bezier(0, 0, 0, 0.5) infinite,
 			glow 5s linear infinite;
 	}
-	/* #btn2 {
-		@apply absolute z-[-1] rounded-full blur-[50px] transition-all;
-		animation: pulse 5s cubic-bezier(0, 0, 0, 0.5) infinite,
-			glow 5s linear infinite;
-	} */
 	@keyframes glow {
 		0% {
 			@apply bg-primary-400/50;
