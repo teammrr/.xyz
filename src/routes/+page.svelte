@@ -9,7 +9,7 @@
 			<!-- Button1 -->
 			<a
 				id="button1"
-				class="btn variant-filled"
+				class="btn variant-filled transition duration-300"
 				href="https://portfolio.teammer.xyz"
 				target="_blank"
 				rel="noreferrer"
@@ -17,15 +17,15 @@
 				Portfolio
 			</a>
 			
-			<!-- <a
+			<a
 			id="btn1"
-			class="btn variant-filled"
-			href="https://portfolio.teammer.xyz"
+			class="btn variant-filled transition duration-300"
+			href="https://discordapp.com/users/837524208140681216"
 			target="_blank"
 			rel="noreferrer"
-		>
-			Roadmap
-		</a> -->
+			>
+			Github
+		</a>
 		</div>
 		
 	</div>

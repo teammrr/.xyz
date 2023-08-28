@@ -3,8 +3,8 @@
 	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import { DarkMode } from 'flowbite-svelte';
-	let btnClass = 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg text-xl p-2';
-
+	let btnClass = 'transition text-gray-500 dark:text-gray-400 hover:scale-125 hover:bg-gray-100 dark:hover:bg-gray-700 duration-300 rounded-lg text-xl p-2 ';
+	
 
 
 	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
@@ -58,13 +58,16 @@
 				</div>
 				<ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
 				  <li>
-					<a href="/" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+					<a href="/" class="block py-2 pl-3 pr-4 transition 
+					duration-100 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
 				  </li>
 				  <li>
-					<a href="/roadmap" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Roadmap</a>
+					<a href="/roadmap" class="block py-2 pl-3 pr-4 transition 
+					duration-100 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Roadmap</a>
 				  </li>
 				  <li>
-					<a href="/contact" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+					<a href="/contact" class="block py-2 pl-3 pr-4 transition 
+					duration-100 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
 				  </li>
 				</ul>
 			  </div>
