@@ -1,60 +1,120 @@
+<script lang='ts'>
+	// The ordering of these imports is critical to your app working properly
+	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
+
+	import { DarkMode } from 'flowbite-svelte';
+	let btnClass = 'transition text-gray-500 dark:text-gray-400 hover:scale-125 hover:bg-gray-100 dark:hover:bg-gray-700 duration-300 rounded-lg text-xl p-2 ';
+	
+
+
+	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
+	import '@skeletonlabs/skeleton/styles/skeleton.css';
+	// Most of your app wide CSS should be put in this file
+	import '../../app.postcss';
+	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
+</script>
+
+
+<AppShell>
+<svelte:fragment slot="header">
+		
+		
+<!-- App Bar -->
+
+<nav class=" bg-white border-gray-200 absolute shadow-[0_8px_30px_rgb(0,0,0,0.12)] inset-x-2 top-2 rounded-lg dark:bg-transparent ">
+	<div class="max-w-screen flex flex-wrap items-center justify-between mx-auto p-4">
+	<a href="https://teammer.xyz/" class="flex items-center">
+		<img src="https://sv1.picz.in.th/images/2023/08/28/dWi9Wja.png" class="h-11 " alt="Team Logo" />
+		<span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"> </span>
+	</a>
+	<div class="flex md:order-2">
+		<div class="relative hidden md:block">
+			<!-- <LightSwitch /> -->
+			<DarkMode {btnClass} />
+		  </div>
+		  <!-- Menu button -->
+		  <button
+			data-collapse-toggle="navbar-search"
+			type="button"
+			class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+			aria-controls="navbar-search"
+			aria-expanded="false"
+		  >
+			<span class="sr-only">Open main menu</span>
+			<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+			  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+			</svg>
+		  </button>
+	</div>
+	  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+		<div class="relative mt-3 md:hidden">
+		  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+			<svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+			  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+			</svg>
+		  </div>
+
+		</div>
+		<ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+		  <li>
+			<a href="/" class="block py-2 pl-3 pr-4 transition 
+			duration-100 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" >Home</a>
+		  </li>
+		  <li>
+			<a href="/roadmap" class="block py-2 pl-3 pr-4 transition 
+			duration-100 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Timeline</a>
+		  </li>
+
+		</ul>
+	  </div>
+	</div>
+  </nav>
+  
+  
+<!-- <div class="fixed top-4 right-6 group" >
+
+</div> -->
+
+</svelte:fragment>
+
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-10 text-center flex flex-col items-center">
 		<div class="flex justify-center space-x-2">
 			
 
-			<ol class="items-center sm:flex">
-				<li class="relative mb-6 sm:mb-0">
-					<div class="flex items-center">
-						<div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
-							<svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-								<path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-							</svg>
-						</div>
-						<div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
-					</div>
-					<div class="mt-3 sm:pr-8">
-						<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.0.0</h3>
-						<time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 2, 2021</time>
-						<p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
-					</div>
+			<ol class="relative border-l border-gray-200 dark:border-gray-700">                  
+				<li class="mb-10 ml-4">
+					<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+					<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">August 2023</time>
+					<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Started Deep Diving Into Web Development</h3>
+					<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Been studying for a while now I have explored dozens of frameworks, components, and interactive elements such as Svelte and Tailwind CSS which is what this page is built with.</p>
+					<a href="https://github.com/sveltejs/svelte" class="inline-flex items-center px-4 py-2 text-sm font-medium transition 
+					duration-200 text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Check Out Svelte Here!!<svg class="w-3 h-3 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+				<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+			  </svg></a>
 				</li>
-				<li class="relative mb-6 sm:mb-0">
-					<div class="flex items-center">
-						<div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
-							<svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-								<path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-							</svg>
-						</div>
-						<div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
-					</div>
-					<div class="mt-3 sm:pr-8">
-						<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.2.0</h3>
-						<time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 23, 2021</time>
-						<p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
-					</div>
+				<li class="mb-10 ml-4">
+					<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+					<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">September 2023</time>
+					<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Exploring More Frameworks & Bootstrap</h3>
+					<p class="text-base font-normal text-gray-500 dark:text-gray-400">I am currently trying out different types of technology and will make a project out of it. Stay tuned!!</p>
 				</li>
-				<li class="relative mb-6 sm:mb-0">
-					<div class="flex items-center">
-						<div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
-							<svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-								<path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-							</svg>
-						</div>
-						<div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
-					</div>
-					<div class="mt-3 sm:pr-8">
-						<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.3.0</h3>
-						<time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on January 5, 2022</time>
-						<p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
-					</div>
+				<li class="ml-4">
+					<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+					<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">November 2023</time>
+					<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Personal Project</h3>
+					<p class="text-base font-normal text-gray-500 dark:text-gray-400">More info releasing soon.</p>
 				</li>
 			</ol>
 			
+
 		</div>
 		
 	</div>
 </div>
+</AppShell>
+	<!-- Page Route Content -->
+	<slot />
 
 <style lang="postcss">	
 	.h3 {
@@ -88,6 +148,4 @@
 	}
 </style>
 
-<script>
 
-</script>
