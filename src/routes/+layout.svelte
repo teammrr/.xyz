@@ -5,7 +5,7 @@
 	import { DarkMode } from 'flowbite-svelte';
 	let btnClass = 'transition text-gray-500 dark:text-gray-400 hover:scale-125 hover:bg-gray-100 dark:hover:bg-gray-700 duration-300 rounded-lg text-xl p-2 ';
 	
-
+	//Page transition
 
 	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
@@ -14,15 +14,14 @@
 	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
 </script>
 
-
 <!-- App Shell -->
 <AppShell>
 	<svelte:fragment slot="header">
-		
-		
+	
 		<!-- App Bar -->
 
 		<nav class=" bg-white border-gray-200 absolute shadow-[0_8px_30px_rgb(0,0,0,0.12)] inset-x-2 top-2 rounded-lg dark:bg-transparent ">
+
 			<div class="max-w-screen flex flex-wrap items-center justify-between mx-auto p-4">
 			<a href="https://teammer.xyz/" class="flex items-center">
 				<img src="https://sv1.picz.in.th/images/2023/08/28/dWi9Wja.png" class="h-11 " alt="Team Logo" />
@@ -54,8 +53,9 @@
 					  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
 					</svg>
 				  </div>
-
 				</div>
+
+			
 				<ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
 				  <li>
 					<a href="/" class="block py-2 pl-3 pr-4 transition 
@@ -72,7 +72,8 @@
 				</ul>
 			  </div>
 			</div>
-		  </nav>
+
+	</nav>
 		  
 		  
 		<!-- <div class="fixed top-4 right-6 group" >
