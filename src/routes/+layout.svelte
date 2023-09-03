@@ -20,7 +20,7 @@
 	
 		<!-- App Bar -->
 
-		<nav class="invisible md:visible  bg-white border-gray-200 absolute shadow-[0_8px_30px_rgb(0,0,0,0.12)] inset-x-2 top-2 rounded-lg dark:bg-transparent ">
+		<nav class="invisible lg:visible  bg-white border-gray-200 absolute shadow-[0_8px_30px_rgb(0,0,0,0.12)] inset-x-2 top-2 rounded-lg dark:bg-transparent ">
 
 			<div class="ax-w-screen flex flex-wrap items-center justify-between mx-auto p-4 ">
 			<a href="https://teammer.xyz/" class="flex items-center">
