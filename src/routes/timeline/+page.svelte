@@ -21,7 +21,7 @@
 		
 <!-- App Bar -->
 
-<nav class=" bg-white border-gray-200 absolute shadow-[0_8px_30px_rgb(0,0,0,0.12)] inset-x-2 top-2 rounded-lg dark:bg-transparent ">
+<nav class=" invisible lg:visible  bg-white border-gray-200 absolute shadow-[0_8px_30px_rgb(0,0,0,0.12)] inset-x-0 top-  dark:bg-transparent ">
 	<div class="max-w-screen flex flex-wrap items-center justify-between mx-auto p-4">
 	<a href="https://teammer.xyz/" class="flex items-center">
 		<img src="https://sv1.picz.in.th/images/2023/08/28/dWi9Wja.png" class="h-11 " alt="Team Logo" />
