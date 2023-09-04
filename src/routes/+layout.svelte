@@ -19,7 +19,10 @@
 	<svelte:fragment slot="header">
 	
 		<!-- App Bar -->
+		<div class="absolute visible right-5 top-5 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700 gap-2  transition duration-200  lg:invisible ">
+			<DarkMode {btnClass} />
 
+		</div>
 		<nav class="invisible lg:visible  bg-white border-gray-200 absolute shadow-[0_8px_30px_rgb(0,0,0,0.12)] inset-x-2 top-2 rounded-lg dark:bg-transparent ">
 
 			<div class="ax-w-screen flex flex-wrap items-center justify-between mx-auto p-4 ">
@@ -28,9 +31,12 @@
 				<span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"> </span>
 			</a>
 			<div class="flex md:order-2">
+
 				<div class="relative hidden md:block">
+						<DarkMode {btnClass} />
+			
 					<!-- <LightSwitch /> -->
-					<DarkMode {btnClass} />
+
 				  </div>
 				  <!-- Menu button -->
 				  <button
