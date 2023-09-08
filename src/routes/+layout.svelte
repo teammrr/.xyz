@@ -21,8 +21,8 @@
 		<!-- App Bar -->
 		<div class="absolute visible right-5 top-5 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700 gap-2  transition duration-200  lg:invisible ">
 			<DarkMode {btnClass} />
-
 		</div>
+		
 		<nav class="invisible lg:visible  bg-white border-gray-200 absolute shadow-[0_8px_30px_rgb(0,0,0,0.12)] inset-x-0 top-  dark:bg-transparent ">
 
 			<div class="ax-w-screen flex flex-wrap items-center justify-between mx-auto p-4 ">
@@ -62,7 +62,7 @@
 				</div>
 
 			
-				<ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+				<ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-black md:dark:bg-transparent dark:border-gray-700">
 				  <li>
 					<a href="/" class="block py-2 pl-3 pr-4 transition 
 					duration-100 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
