@@ -12,6 +12,17 @@
 	// Most of your app wide CSS should be put in this file
 	import '../../app.postcss';
 	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
+
+
+	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition'
+	
+	let visible = false
+	onMount(() =>{
+		visible = true
+	})
+
+
 </script>
 
 
@@ -82,29 +93,30 @@
 
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-10 text-center flex flex-col items-center">
-		<div class="flex justify-center space-x-2">
-			
-
-			<ol class="relative border-l border-gray-200 dark:border-gray-700">                  
-				<li class="mb-10 ml-4">
-					<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-					<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">August 2023</time>
-					<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Started Deep Diving Into Web Development</h3>
-					<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Been studying for a while now I have explored dozens of frameworks, components, and interactive elements such as Svelte and Tailwind CSS which is what this page is built with.</p>
-					<a href="https://github.com/sveltejs/svelte" class="inline-flex items-center px-4 py-2 text-sm font-medium transition 
-					duration-200 text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Check Out Svelte Here!!<svg class="w-3 h-3 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-				<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-			  </svg></a>
-				</li>
-				<li class="mb-10 ml-4">
-					<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-					<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">September 2023</time>
-					<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Exploring More Frameworks & Bootstrap</h3>
-					<p class="text-base font-normal text-gray-500 dark:text-gray-400">I am currently trying out different types of technology and will make a project out of it. Stay tuned!!</p>
-				</li>
-			</ol>
+		{#if visible}
+		<div class="anim-content" transition:fly={{ y: 20, duration: 1000 }}>
+			<div class="flex justify-center space-x-2">
+				<ol class="relative border-l border-gray-200 dark:border-gray-700">                  
+					<li class="mb-10 ml-4">
+						<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+						<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">August 2023</time>
+						<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Started Deep Diving Into Web Development</h3>
+						<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Been studying for a while now I have explored dozens of frameworks, components, and interactive elements such as Svelte and Tailwind CSS which is what this page is built with.</p>
+						<a href="https://github.com/sveltejs/svelte" class="inline-flex items-center px-4 py-2 text-sm font-medium transition 
+						duration-200 text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Check Out Svelte Here!!<svg class="w-3 h-3 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+				  </svg></a>
+					</li>
+					<li class="mb-10 ml-4">
+						<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+						<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">September 2023</time>
+						<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Exploring More Frameworks & Bootstrap</h3>
+						<p class="text-base font-normal text-gray-500 dark:text-gray-400">I am currently trying out different types of technology and will make a project out of it. Stay tuned!!</p>
+					</li>
+				</ol>
+			</div>
 		</div>
-		
+		{/if}
 	</div>
 </div>
 </AppShell>
