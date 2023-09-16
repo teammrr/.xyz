@@ -1,29 +1,4 @@
-<script lang='ts'>
-	// The ordering of these imports is critical to your app working properly
-	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 
-	import { DarkMode } from 'flowbite-svelte';
-	let btnClass = 'transition text-gray-500 dark:text-gray-400 hover:scale-125 hover:bg-gray-100 dark:hover:bg-gray-700 duration-300 rounded-lg text-xl p-2 ';
-	
-
-
-	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
-	import '@skeletonlabs/skeleton/styles/skeleton.css';
-	// Most of your app wide CSS should be put in this file
-	import '../../app.postcss';
-	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
-
-
-	import { onMount } from 'svelte';
-	import { fly } from 'svelte/transition'
-	
-	let visible = false
-	onMount(() =>{
-		visible = true
-	})
-
-
-</script>
 
 
 <AppShell>
@@ -154,5 +129,32 @@
 		}
 	}
 </style>
+
+<script lang='ts'>
+	// The ordering of these imports is critical to your app working properly
+	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
+
+	import { DarkMode } from 'flowbite-svelte';
+	let btnClass = 'transition text-gray-500 dark:text-gray-400 hover:scale-125 hover:bg-gray-100 dark:hover:bg-gray-700 duration-300 rounded-lg text-xl p-2 ';
+	
+
+
+	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
+	import '@skeletonlabs/skeleton/styles/skeleton.css';
+	// Most of your app wide CSS should be put in this file
+	import '../../app.postcss';
+	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
+
+
+	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition'
+	
+	let visible = false
+	onMount(() =>{
+		visible = true
+	})
+
+
+</script>
 
 

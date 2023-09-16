@@ -4,7 +4,8 @@
 	
 	import { DarkMode } from 'flowbite-svelte';
 	let btnClass = 'transition text-gray-500 dark:text-gray-400 hover:scale-125 hover:bg-gray-100 dark:hover:bg-gray-700 duration-300 rounded-lg text-xl p-2 ';
-	
+	import { autoModeWatcher } from '@skeletonlabs/skeleton';
+
 	//Page transition
 	import { page } from '$app/stores';
 	import { fly } from 'svelte/transition';
@@ -53,8 +54,10 @@
 	<div class="absolute visible right-5 top-5 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700 gap-2  transition duration-200  lg:invisible ">
 		<DarkMode {btnClass} />
 	</div>
-	
-	<nav class="invisible lg:visible  bg-white border-gray-200 absolute shadow-[0_8px_30px_rgb(0,0,0,0.12)] inset-x-0 top-  dark:bg-transparent ">
+	<div class="absolute invisible right-6 top-6 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700 gap-2  transition duration-200  lg:visible ">
+		<DarkMode {btnClass} />
+	</div>
+	<!-- <nav class="invisible lg:visible  bg-white border-gray-200 absolute shadow-[0_8px_30px_rgb(0,0,0,0.12)] inset-x-0 top-  dark:bg-transparent ">
 		
 		<div class="ax-w-screen flex flex-wrap items-center justify-between mx-auto p-4 ">
 			<a href="https://teammer.xyz/" class="flex items-center">
@@ -65,12 +68,9 @@
 				
 				<div class="relative hidden md:block">
 					<DarkMode {btnClass} />
-					
-					<!-- <LightSwitch /> -->
-					
-				</div>
+				</div> -->
 				<!-- Menu button -->
-				<button
+				<!-- <button
 				data-collapse-toggle="navbar-search"
 				type="button"
 				class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -82,8 +82,8 @@
 					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
 				</svg>
 			</button>
-		</div>
-		<div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+		</div> -->
+		<!-- <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
 			<div class="relative mt-3 md:hidden">
 				<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
 					<svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -107,10 +107,10 @@
 					duration-100 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Projects</a>
 				</li>
 			</ul>
-		</div>
-	</div>
+		</div> -->
+	<!-- </div> -->
 	
-</nav>
+<!-- </nav> -->
 
 
 <!-- <div class="fixed top-4 right-6 group" >
@@ -121,3 +121,5 @@
 <!-- Page Route Content -->
 <slot />
 </AppShell>
+
+<svelte:head>{@html `<script>${autoModeWatcher.toString()} autoModeWatcher();</script>`}</svelte:head>
